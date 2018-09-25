@@ -1,7 +1,7 @@
 {
   "wifi": {
-    "ssid": "WiFi-2.4-62A1",
-    "password": "internetisvaniedereen"
+    "ssid": "enter-ssid-here",
+    "password": "enter-password-here"
   },
   "mqtt": {
     "host": "iotworkshop.serveo.net",

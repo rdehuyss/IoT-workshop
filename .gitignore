@@ -1,3 +1,4 @@
 .idea
+config.json
 Docker/elasticsearch/data
 Docker/mosquitto/data

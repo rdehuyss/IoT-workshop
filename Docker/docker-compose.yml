@@ -34,6 +34,9 @@ services:
     build: ./MqttBeat
     volumes:
       - ./MqttBeat/mqttbeat.yml:/go/src/github.com/nathan-k-/mqttbeat/mqttbeat.yml
+    depends_on: 
+      - mqtt
+      - elasticsearch
     command: ./mqttbeat -c mqttbeat.yml -e "*"
 
   serveo:
@@ -41,4 +44,6 @@ services:
     tty: true
     stdin_open: true
     restart: unless-stopped
+    depends_on: 
+      - mqtt
     command: "ssh -R iotworkshop.serveo.net:1836:mqtt:1883 -o \"StrictHostKeyChecking no\" -o ServerAliveInterval=60 serveo.net"
