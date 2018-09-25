@@ -9,7 +9,7 @@ from mqttpublisher import MQTTPublisher
 class AirQuality:
 
     def __init__(self):
-        f = open('config_data.json')
+        f = open('config.json')
         self.config_data = ujson.load(f)
         f.close()
 
