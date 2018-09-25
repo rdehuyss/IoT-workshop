@@ -1,0 +1,44 @@
+version: '3.6'
+
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.4.1
+    environment:
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms1024m -Xmx1024m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - ./elasticsearch/data:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:6.4.1
+    ports:
+      - 5601:5601
+
+  mqtt:
+    image: eclipse-mosquitto:latest
+    restart: unless-stopped
+    ports:
+      - "1883:1883"
+    volumes:
+      - ./mosquitto/config:/mosquitto/config
+      - ./mosquitto/data:/mosquitto/data
+
+  mqttbeat:
+    image: dehuysser/mqttbeat
+    build: ./MqttBeat
+    volumes:
+      - ./MqttBeat/mqttbeat.yml:/go/src/github.com/nathan-k-/mqttbeat/mqttbeat.yml
+    command: ./mqttbeat -c mqttbeat.yml -e "*"
+
+  serveo:
+    image: taichunmin/serveo:latest
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+    command: "ssh -R iotworkshop.serveo.net:1836:mqtt:1883 -o \"StrictHostKeyChecking no\" -o ServerAliveInterval=60 serveo.net"
