@@ -1,4 +1,5 @@
 .idea
+.ipynb_checkpoints
 config.json
 Docker/elasticsearch/data
 Docker/mosquitto/data
