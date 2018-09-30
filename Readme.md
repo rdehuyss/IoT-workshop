@@ -22,5 +22,5 @@ This is the Github Repository for the IOT Workshop.
   - Run `pip install -e jupyter_micropython_kernel`
   - Run `python -m jupyter_micropython_kernel.install`
   - Verify Jupyter MicroPython Kernel installation using command `jupyter kernelspec list`
-- Putty
+- Putty (or any other Serial Console)
 
