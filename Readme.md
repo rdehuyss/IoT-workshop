@@ -10,7 +10,7 @@ This is the Github Repository for the IOT Workshop.
 - Jumper cables
 
 ### Software
-- CH341SER.exe USB-to-UART bridge (windows only)
+- CH341SER.exe USB-to-UART bridge (windows only), zie 00 Installation in deze repo
 - Latest Docker and Docker Compose
 - PyCharm
 - Python 3.6
