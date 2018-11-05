@@ -19,6 +19,7 @@ This is the Github Repository for the IOT Workshop.
 - Jupyter (`pip install jupyter`)
 - Jupyter MicroPython Kernel
   - Navigate to ./00 Installation/Jupyter Notebook/
+  - Run `git clone https://github.com/goatchurchprime/jupyter_micropython_kernel`
   - Run `pip install -e jupyter_micropython_kernel`
   - Run `python -m jupyter_micropython_kernel.install`
   - Verify Jupyter MicroPython Kernel installation using command `jupyter kernelspec list`
