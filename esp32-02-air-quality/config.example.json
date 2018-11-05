@@ -1,0 +1,12 @@
+{
+  "wifi": {
+    "ssid": "enter-ssid-here",
+    "password": "enter-password-here"
+  },
+  "mqtt": {
+    "host": "iotworkshop.serveo.net",
+    "port": 1836,
+    "clientName": "group0",
+    "topic": "/iot-workshop/air-quality"
+  }
+}
