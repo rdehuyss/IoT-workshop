@@ -18,6 +18,7 @@ This is the Github Repository for the IOT Workshop.
     - adafruit-ampy (tested with v 1.0.5)
     - docopt (tested with v0.6.2)
 - Python 3.6
+  - **WARNING** make sure you are using Python3 and the correct pip. It may be that you need to use `python3` instead of `python` and `pip3` instead of `pip`
 - Upgrade pip (`python -m pip install --upgrade pip`)
 - Esptool (`pip install esptool`)
 - Jupyter (`pip install jupyter`)
